@@ -1,0 +1,5 @@
+body, ul, li {list-style: none; padding: 0 ; margin:0;}
+a{text-decoration: none; color:inherit}
+
+.text_wrap{width: 100%;}
+.text_box{max-width:1400px;margin: 0 auto;}

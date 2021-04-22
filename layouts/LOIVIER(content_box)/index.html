@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>content_box</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css'><link rel="stylesheet" href="./style.css">
+    
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Ranga&display=swap');
+    p{font-family: 'Comfortaa';}
+    body,ul,li,ol,dl{list-style: none;padding: 0;margin: 0;}
+    a{text-decoration: none;  color: #1f4095;;}
+    p{color: #1f4095;}
+
+    .content_box{max-width: 1200px; display:flex; margin: 0 auto;     margin-top: 50px;}
+
+    .right_box_in{height: 100%;display: flex;flex-direction: column;justify-content: center; padding:0 0 0 50px;}
+    .left_box{width: 50%;padding: 0 50px; display: flex; flex-direction: column;}
+    .right_box_title{font-size: 54px; font-weight: bold; margin:0 0 80px 0}
+    .left_box img{width: 100%; }
+
+    .click_box{border:1px solid rgba(31, 64, 149, 0.3);  padding: 19px 40px 20px 40px; cursor: pointer;transition: 0.3s;}
+    .click_wrap{padding:40px 0;}
+    .click_box:hover{background-color: rgba(31, 64, 149, 0.3); transition: 0.3s; }
+    
+    .keywords{    max-width: 1200px;    margin: 0 auto;}
+    .keywords_list{display: flex;justify-content: center;text-align: center; padding: 50px;}
+
+    .keywords_item{padding: 20px 40px; border-left: 1px solid black; width: 100%;}
+    .keywords_item:last-child{border-right: 1px solid black;}
+    .keywords_item * {margin: 0; }
+    .keywords_item h3{margin-bottom: 20px; }
+    
+    @media(max-width:900px){
+      .content_box{  flex-direction: column-reverse; align-items: center; padding:0 40px; padding-top: 100px;}
+      .right_box_in{padding:0;}
+      .right_box{width: 100%;}
+      .right_box_title{margin:0 0 20px 0}
+      .left_box{width: 100%;}
+
+      
+    }
+</style>
+<body>
+    <section>
+        <div class="keywords">
+            <ul class="keywords_list">
+                <li class="keywords_item">
+                    <h3>Responsibility</h3>
+                    <p>주어진 일은 최선을 다해 끝까지</p>
+                </li>
+                <li class="keywords_item">
+                    <h3>Meticulous</h3>
+                    <p>설계부터 예외처리까지 꼼꼼하게</p>
+                </li>
+                <li class="keywords_item">
+                    <h3>Intuitive</h3>
+                    <p>사용하기 쉽고 직관적인 UX/UI</p>
+                </li>
+            </ul>
+        </div>
+        <div class="content_box">
+            <div class="left_box">
+                <img src="images/left_bg.jpg" alt="">
+            </div>
+            <div class="right_box">
+                    <div class="right_box_in">
+                    <p class="right_box_title">LOVE, LOiViER</p>
+                    <p>지금 나의 순간을 가장 나 답게 살아가는 로이비어 여러분,</p>
+                    <p>로이비에게 여러분의 소중한 일상을<br>
+                        인스타그램에 공유해주실 때마다<br>
+                        환경단체에 100원이 기부됩니다</p>
+                        <div class="click_wrap">
+                        <a class="click_box">
+                            LEARN MORE
+                        </a>
+                </div>
+                </div>
+            </div>
+        </div>
+</section>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/614007/sliiide.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meny_scrollTop</title>
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<style>
+    *{margin:0;padding: 0; list-style: none; text-decoration: none; color: inherit;}
+    header{width: 100%; text-align:center; height: 50px; position: fixed;}
+    .menu_list{display: flex;justify-content: center; align-items: center;}
+    .menu_item{margin-left: 50px; padding: 15px;}
+    section { width: 100vw; height: 100vh;}
+    .section01{background-color:orange;}
+    .section02{background-color:pink;}
+    .section03{background-color:gray;}
+    .section04{background-color:skyblue;}
+</style>
+<body>
+    <header>
+        <ul class="menu_list">
+            <li class="menu_item" id="menu_01"><a href="#">메뉴1</a></li>
+            <li class="menu_item" id="menu_02"><a href="#">메뉴2</a></li>
+            <li class="menu_item" id="menu_03"><a href="#">메뉴3</a></li>
+            <li class="menu_item" id="menu_04"><a href="#">메뉴4</a></li>
+        </ul>
+    </header>
+    <div class="content_wrap">
+        <section id="section1"class="section01"></section>
+        <section id="section2"class="section02"></section>
+        <section id="section3"class="section03"></section>
+        <section id="section4"class="section04"></section>
+    </div>
+
+    <script>
+        console.log($("#section1").offset());
+        console.log($("#section2").offset());
+        console.log($("#section3").offset());
+        console.log($("#section4").offset());
+        
+        $("#menu_01").click(function () {
+            var positon = $("#section1").offset();
+            $("body").stop().animate({scrollTop:positon.top},500);
+        });
+        $("#menu_02").click(function () {
+            var positon = $("#section2").offset();
+            $("body").stop().animate({scrollTop:positon.top},500);
+        });
+        $("#menu_03").click(function () {
+            var positon = $("#section3").offset();
+            $("body").stop().animate({scrollTop:positon.top},500);
+        });
+        $("#menu_04").click(function () {
+            var positon = $("#section4").offset();
+            $("body").stop().animate({scrollTop:positon.top},500);
+        });
+
+    </script>
+</body>
+</html

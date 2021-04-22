@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <a class="top_btn" href="#">
+    <div>
+      <!-- <img src="images/svg/top_svg.svg" alt="" /> 이미지가 있으면 -->
+    </div>
+  </a>
+ 
+  <script>
+          $(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 500) {
+                $('.top_btn').fadeIn();
+            } else {
+                $('.top_btn').fadeOut();
+            }
+        });
+        
+        $(".top_btn").click(function() {
+            $('html, body').animate({
+                scrollTop : 0
+            }, 400);
+            return false;
+        });
+    });
+  </script>
+  
+</body>
+
+</html>

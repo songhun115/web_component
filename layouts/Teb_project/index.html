@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hun PortFolio</title>
+  <!-- 폰트 -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- 스크롤 트리거 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+
+  <link rel="icon" type="image/png" href="imgs\donut.png" />
+  <link rel="stylesheet" href="style.css" />
+
+  
+  <script src="main.js" defer></script>
+</head>
+
+<body>
+<div class="boxbox" ></div>
+  <!-- Work  -->
+  <section id="work" class="section section_container">
+    
+    <div class="work_categories">
+      <button class="category__btn selected" data-filter="*"  style="font-weight: 600;">
+        All
+      </button>
+      <button class="category__btn" data-filter="front-end" style="font-weight: 600;">
+        RESPONSIVE
+      </button>
+      <button class="category__btn" data-filter="back-end" style="font-weight: 600;">
+        ADAPTIVE
+        </button>
+        <button class=" category__btn" data-filter="mobile" style="font-weight: 600;">
+          MOBILE
+      </button>
+    </div>
+
+    <ul class="work__projects">
+      <li class="project project01" data-type="front-end">
+          <img src="imgs/project/slide_img01.jpg" alt="Front-end" class="project__img" />
+          <div class="project__description">
+            <h3>Front-end1</h3>
+            <span>Clone coding with and CSS</span>
+          </div>
+      </li>
+      <li class="project project02" data-type="front-end">
+        <a href="#" target="blank" >
+          <img src="imgs/project/slide_img02.jpg" alt="Front-end" class="project__img" />
+          <div class="project__description">
+            <h3>Front-end2</h3>
+            <span>Clone coding with and CSS</span>
+          </div>
+        </a>
+      </li >
+      <li class="project project03" data-type="front-end">
+      <a href="#" target="blank" >
+        <img src="imgs/project/slide_img03.jpg" alt="Front-end" class="project__img" />
+        <div class="project__description">
+          <h3>Front-end3</h3>
+          <span>Clone coding with and CSS</span>
+        </div>
+      </a>
+    </li>
+      <li class="project project04" data-type="back-end">
+        <a href="#" target="blank" >
+          <img src="imgs/project/slide_img04.jpg" alt="back-end" class="project__img" />
+          <div class="project__description">
+            <h3>back-end1</h3>
+            <span>Clone coding with and CSS</span>
+          </div>
+        </a>
+      </li>
+      <li class="project project05" data-type="back-end">
+        <a href="#" target="blank" >
+          <img src="imgs/project/slide_img05.jpg" alt="back-end" class="project__img" />
+          <div class="project__description">
+            <h3>back-end2</h3>
+            <span>Clone coding with and CSS</span>
+          </div>
+        </a>
+      </li >
+      <li class="project project06" data-type="back-end">
+        <a href="#" target="blank" >
+          <img src="imgs/project/slide_img06.jpg" alt="back-end" class="project__img" />
+          <div class="project__description">
+            <h3>back-end3</h3>
+            <span>Clone coding with and CSS</span>
+          </div>
+        </a>
+      </li>
+      <li class="project project07" data-type="mobile">
+        <a href="#" target="blank" >
+          <img src="imgs/project/slide_img07.jpg" alt="mobile" class="project__img" />
+          <div class="project__description">
+            <h3>mobile1</h3>
+            <span>Clone coding with and CSS</span>
+          </div>
+        </a>
+      </li>
+      <li class="project project08" data-type="mobile">
+        <a href="#" target="blank" >
+          <img src="imgs/project/slide_img08.jpg" alt="mobile" class="project__img" />
+          <div class="project__description">
+            <h3>mobile2</h3>
+            <span>Clone coding with and CSS</span>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </section>
+  
+<script>
+  
+const workBtnContainer = document.querySelector(".work_categories");
+
+const projectContainer = document.querySelector(".work__projects");
+const projects = document.querySelectorAll(".project");
+
+if(workBtnContainer.attachEvent){
+  workBtnContainer.attachEvent('onclick', function(event){
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+  if (filter == null) {
+    return;
+  }
+
+  const active = document.querySelector(".category__btn.selected");
+  active.classList.remove("selected");
+  const target =
+    e.target.nodeName === "BUTTON" ? e.target : e.target.parentNode;
+  target.classList.add("selected");
+
+  projectContainer.classList.add("anim-out");
+  setTimeout(() => {
+    projects.forEach((project) => {
+      if (filter === "*" || filter === project.dataset.type) {
+        project.classList.remove("invisible");
+      } else {
+        project.classList.add("invisible");
+      }
+    });
+    projectContainer.classList.remove("anim-out");
+  }, 350);
+    });
+}
+else if(workBtnContainer.addEventListener){
+workBtnContainer.addEventListener("click", (e) =>  { 
+  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+  if (filter == null) {
+    return;
+  }
+
+  const active = document.querySelector(".category__btn.selected");
+  active.classList.remove("selected");
+  const target =
+    e.target.nodeName === "BUTTON" ? e.target : e.target.parentNode;
+  target.classList.add("selected");
+
+  projectContainer.classList.add("anim-out");
+  setTimeout(() => {
+    projects.forEach((project) => {
+      if (filter === "*" || filter === project.dataset.type) {
+        project.classList.remove("invisible");
+      } else {
+        project.classList.add("invisible");
+      }
+    });
+    projectContainer.classList.remove("anim-out");
+  }, 350);
+});
+} 
+
+
+</script>
+</body>
+</html>
+
+

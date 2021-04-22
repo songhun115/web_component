@@ -1,0 +1,105 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="../package/swiper-bundle.min.css">
+  
+    <!-- Demo styles -->
+    <style>
+      html,body {position: relative;height: 100%;}
+  
+      body {background: #eee;font-family: Helvetica Neue, Helvetica, Arial, sans-serif;font-size: 14px;color: #000;margin: 0;padding: 0}
+  
+      .swiper-container {width: 100%;height: 100%;}
+  
+      .swiper-slide {text-align: center;font-size: 18px;background: #fff;display: -webkit-box;display: -ms-flexbox;display: -webkit-flex;display: flex;-webkit-box-pack: center;-ms-flex-pack: center;-webkit-justify-content: center;justify-content: center;-webkit-box-align: center;-ms-flex-align: center;-webkit-align-items: center;align-items: center;}
+      .slide01{background: url("../images/img_1.jpg"); background-size: cover;}
+      .slide02{background: url("../images/img_2.jpg"); background-size: cover;}
+      .slide03{background: url("../images/img_3.jpg"); background-size: cover;}
+      .slide04{background: url("../images/img_4.jpg"); background-size: cover;}
+      .slide05{background: url("../images/img_1.jpg"); background-size: cover;}
+      .slide06{background: url("../images/img_2.jpg"); background-size: cover;}
+      .slide07{background: url("../images/img_3.jpg"); background-size: cover;}
+      .slide08{background: url("../images/img_4.jpg"); background-size: cover;}
+      .swiper-container{margin-top: 150px;}
+      .swiper-wrapper{height: 750px;}
+      .swiper-slide{margin-right:0 !important; padding-right:45px !important;}
+
+       @media (max-width: 1300px) {
+        .swiper-wrapper.swiper-slide{ padding-right:30px !important; border:1px solid red;}
+      }
+
+      @media(max-width:900px){
+        .swiper-wrapper .swiper-slide{ padding-right:20px !important;}
+      }
+      
+      @media(max-width:650px){
+        .swiper-wrapper .swiper-slide{ padding-right:0px !important;}
+      } 
+      
+    </style>
+  </head>
+  
+  <body>
+    <!-- Swiper -->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide slide01">Slide 1</div>
+        <div class="swiper-slide slide02">Slide 2</div>
+        <div class="swiper-slide slide03">Slide 3</div>
+        <div class="swiper-slide slide04">Slide 4</div>
+        <div class="swiper-slide slide05">Slide 5</div>
+        <div class="swiper-slide slide06">Slide 6</div>
+        <div class="swiper-slide slide07">Slide 7</div>
+        <div class="swiper-slide slide08">Slide 8</div>
+      </div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  
+    <!-- Swiper JS -->
+    <script src="../package/swiper-bundle.min.js"></script>
+  
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        // init: false,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        breakpoints: {
+          '@0.00': {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          '@0.75': {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          '@1.00': {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+          '@1.50': {
+            slidesPerView: 4,
+            spaceBetween: 50,
+          },
+        }
+      });
+    </script>
+  </body>
+  
+  </html>

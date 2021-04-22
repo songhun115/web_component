@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .wrap{
+        width: 100vw;
+        height: 100vh;
+    }
+    .box{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .list{max-width: 1200px; margin:0 auto;}
+    .item{width: 300px; height: 500px; border-radius: 10px; background-color: tomato;}
+    .img_wrap{display: flex; width: 100%; height: 100%; justify-content: center; align-items:center;}
+    .item .img_wrap img { transition: all 0.5s;}
+    .item:hover .img_wrap img{ position: relative; transform: translateY(-90%); opacity: 0;}
+    
+</style>
+<body>
+    <div class="wrap">
+        <div class="box">
+            <div class="list">
+                <div class="item">
+                    <div class="img_wrap"><img src="zz.png" alt=""></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+body {
+  background-color: hsl(0,0%,18%);
+  background-size: 3px 3px;
+  background-image: 
+    linear-gradient(  0deg, hsla(0,0%,0%,0) 0, hsla(0,0%,10%,1) 1px),
+    linear-gradient( 90deg, hsla(0,0%,0%,0) 0, hsla(0,0%,10%,1) 1px);
+}
+
+.tool-set {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.tool-set svg {
+  max-width: 600px;
+  height: auto;
+  width: 100%;
+  margin-bottom: 100px;
+}
+.tool-set svg .text {
+  font-size: 12px;
+  text-align: center;
+  display: flex;
+  position: relative;
+}
+.tool-set svg .tool-illustrator {
+  position: absolute;
+  transform: translate(170px, 110px);
+}
+.tool-set svg .tool-indesign {
+  position: absolute;
+  transform: translate(180px, 390px);
+}
+.tool-set svg .tool-sketch {
+  position: absolute;
+  transform: translate(50px, 190px);
+}
+.tool-set svg .tool-invision {
+  position: absolute;
+  transform: translate(35px, 317px);
+}
+.tool-set svg .tool-scss {
+  position: absolute;
+  transform: translate(65px, 190px);
+}
+.tool-set svg .tool-git {
+  position: absolute;
+  transform: translate(53px, 315px);
+}
+.tool-set svg .tool-vscode {
+  position: absolute;
+  transform: translate(185px, 390px);
+}
+.tool-set svg .tool-css {
+  position: absolute;
+  transform: translate(198px, 120px);
+}
+
+@keyframes designTool {
+  0% {
+    stroke-dashoffset: 700;
+  }
+  10% {
+    stroke-dashoffset: 0;
+  }
+  70% {
+    stroke-dashoffset: 0;
+  }
+  90% {
+    stroke-dashoffset: -700;
+  }
+  100% {
+    stroke-dashoffset: -700;
+  }
+}
+.design-tool-line {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+  animation: designTool 6s ease-out infinite running;
+}
+
+@keyframes codingTool {
+  0% {
+    stroke-dashoffset: 700;
+  }
+  10% {
+    stroke-dashoffset: 0;
+  }
+  70% {
+    stroke-dashoffset: 0;
+  }
+  90% {
+    stroke-dashoffset: -700;
+  }
+  100% {
+    stroke-dashoffset: -700;
+  }
+}
+.coding-tool-line {
+  stroke-dasharray: 700;
+  stroke-dashoffset: 700;
+  animation: codingTool 6s ease-out infinite running;
+}

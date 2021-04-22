@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>content_box</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Ranga&display=swap');
@@ -36,6 +38,7 @@
     }
 </style>
 <body>
+    <div class="box" style="height: 1500px;"></div>
     <div class="content_box">
         <div class="left_box">
             <img src="images/left_bg.jpg" alt="">
@@ -55,5 +58,13 @@
             </div>
         </div>
     </div>
+    <div class="box" style="height: 1500px;"></div>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.from(".content_box", {
+        scrollTrigger: ".content_box", x: 1000, duration: 1, })
+
+    </script>
 </body>
 </html>

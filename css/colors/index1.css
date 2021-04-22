@@ -1,0 +1,12 @@
+/* .delivery-wrap .delivery_img{margin:20px 0;}
+.delivery_content{display:flex;}
+.delivery-wrap{display:flex; width:50%; flex-direction:column; align-items:center; justify-content:center;}
+.delivery-wrap .delivery_imgdisplay{width: 50%;}
+
+
+@media (max-width:768px) {
+	.service_area_content .service_area_content,
+	.service_area_content .service_sub_content_p{padding:0 20px;}
+	.service_area_content .delivery-wrap{display:flex; flex-direction:column; align-items:center; margin-bottom:20px;}
+	.service_area_content .delivery-wrap .delivery_img{margin:20px 0;}
+} */
